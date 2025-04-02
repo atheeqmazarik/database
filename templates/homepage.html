@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .dashboard {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .dashboard-item {
+            padding: 20px;
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            background-color: #f1f1f1;
+            transition: background-color 0.3s;
+        }
+        .dashboard-item a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .dashboard-item:hover {
+            background-color: #e6f7ff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Homepage!</h1>
+    <p>This is your new landing page.</p>
+
+    <div class="dashboard">
+        <div class="dashboard-item">
+            <h2>Dashboard</h2>
+            <p>View all tickets</p>
+            <a href="/dashboard">Go to Dashboard</a>
+        </div>
+        <div class="dashboard-item">
+            <h2>Create Ticket</h2>
+            <p>Create a new ticket</p>
+            <a href="/create">Create New Ticket</a>
+        </div>
+        <div class="dashboard-item">
+            <h2>Manage Tickets</h2>
+            <p>Edit or delete tickets</p>
+            <a href="/dashboard">Manage Tickets</a>
+        </div>
+    </div>
+</body>
+</html>

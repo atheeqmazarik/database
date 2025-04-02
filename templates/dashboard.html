@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Dashboard!</h1>
+    <a href="/create">Create New Ticket</a>
+    <h2>All Tickets</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th><th>Title</th><th>Status</th><th>Created By</th><th>Assigned To</th><th>Actions</th>
+        </tr>
+        {% for ticket in tickets %}
+        <tr>
+            <td>{{ ticket[0] }}</td>
+            <td>{{ ticket[1] }}</td>
+            <td>{{ ticket[2] }}</td>
+            <td>{{ ticket[3] }}</td>
+            <td>{{ ticket[4] }}</td>
+            <td>
+                <a href="/edit/{{ ticket[0] }}">Edit</a>
+                {% if user.role == 'admin' %}
+                <form method="POST" action="/delete/{{ ticket[0] }}" style="display:inline">
+                    <button type="submit">Delete</button>
+                </form>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

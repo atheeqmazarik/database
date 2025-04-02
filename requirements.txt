@@ -1,0 +1,6 @@
+Flask
+Flask-Login
+Flask-Dance
+Flask-MySQLdb
+gunicorn
+python-dotenv
